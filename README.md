@@ -47,24 +47,20 @@ Ahora, ambas personas deberán clonar el repositorio en sus computadoras siguien
 
 En este paso, cada integrante de la pareja hará un cambio en el proyecto, que no afectará el trabajo del otro y luego ambas personas descargarán los cambios.
 
-**Pasos para Persona 🅰️**
-
-Editar archivo `clases/usuario.py`, y agregar los siguientes métodos de clase:
-
-```python
-def agregarTarea(self, tarea):
-        self.tareas.append(tarea)
-```
-
-Y en el archivo `clases/tarea.py` agregar los siguientes métodos de clase:
+1. **Persona 🅰️** editará el archivo `clases/tarea.py`, agregando el siguiente método de clase:
 ```python
 def terminar(self):
         self.listo = True
 ```
 
-**Pasos para Persona 🅱️**
+2. **Persona 🅰️** actualizará el repositorio remoto. Desde la consola de Git se deberá "empujar" los cambios que se hicieron. Para ello, debe hacer lo siguiente en la consola de git (situandola en la carpeta raíz del repositorio).
 
-Editar archivo `clases/usuario.py`, y agregar los siguientes métodos de clase:
+    + `git status` para ver qué cambios se hicieron.
+    + `git add nombre-archivo` para agregar un archivo al commit. En este caso el archivo será clases/tarea.py 
+    + `git commit -m "descripción del cambio que se hizo" ` para hacer commit de los cambios. 
+    + `git push` para subir los cambios al repositorio remoto.  
+
+3. **Persona 🅱️**  editará el archivo `clases/usuario.py`, y agregará los siguientes métodos de clase:
 
 ```python
 def listarTareas(self):
@@ -75,11 +71,17 @@ def listarTareas(self):
             print(f"[ ] {tarea.obtenerNombre()}" )
 ```
 
+4. **Persona 🅱️** actualizará el repositorio remoto con sus cambios según el paso 2. Al hacer `git push` aparecerá un mensaje de error.
+
+Esto pasará porque **Persona 🅰️** hizo cambios a un archivos, cambios que **Persona 🅱️** no ha descargado. Para arreglar esto, **Persona 🅱️** deberá hacer `git pull`. Al hacer esto, juntará (merge) la versión del repostorio remoto con la versión local. Por esta razón aparecerá un editor con un mensaje parecido a este
+
 Y en el archivo `clases/tarea.py` agregar los siguientes métodos de clase:
 ```python
 def terminar(self):
         self.listo = True
 ```
+
+Ahora ambas personas deben 
 
 
 
