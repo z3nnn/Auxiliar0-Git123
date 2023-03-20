@@ -17,7 +17,24 @@ Para esta actividad necesitarán:
 
 ## Actividad
 
+### Parte 1: Fork del proyecto
+
 Cada pareja trabajará sobre el mismo código base, pero deberan hacer una copia de este código en su repositorio personal, así, sus cambios no afectarán a otras parejas.
 
-Una persona de la pareja (Persona A) debería hacer un "Fork de este repositorio (el que están viendo ahora). Para ello, en Github deberán hacer click en 
+Una persona de la pareja (Persona A) debería hacer un "Fork de este repositorio (el que están viendo ahora). Para ello, en Github deberán hacer click en "Fork" y seguir las instrucciones. 
 
+Luego de hacer el Fork, deberían tener un repositorio con la misma imagen con el nombre *sunombredeusuario/Auxiliar1-Git*. Esto implica que tendrán su propia versión del repositorio, en el cual podrán tener control de todo.
+
+Ahora, la persona A (quien realizó el fork) deberá darle acceso a su pareja (Persona B). Para ello deberán ir a "settings" en la barra superior del repositorio (como indica la imágen).
+
+![]()
+
+Después...manage access...add people.
+
+| Todos los miembros deben ser colaboradores del repositorio. Esto les dará acceso a hacer modificaciones al proyecto.
+
+### Parte 2: Clonar el proyecto
+
+Ahora, ambas personas deberán clonar el repositorio en sus computadoras siguiendo los siguientes pasos:
+
+1. Clonar el enlace del repositorio
