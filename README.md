@@ -67,12 +67,12 @@ def terminar(self):
 Editar archivo `clases/usuario.py`, y agregar los siguientes métodos de clase:
 
 ```python
-    def listarTareas(self):
-        for tarea in self.tareas:
-            if tarea.estaLista():
-                print(f"[X] {tarea.obtenerNombre()}" )
-            else:
-                print(f"[ ] {tarea.obtenerNombre()}" )
+def listarTareas(self):
+    for tarea in self.tareas:
+        if tarea.estaLista():
+            print(f"[X] {tarea.obtenerNombre()}" )
+        else:
+            print(f"[ ] {tarea.obtenerNombre()}" )
 ```
 
 Y en el archivo `clases/tarea.py` agregar los siguientes métodos de clase:
