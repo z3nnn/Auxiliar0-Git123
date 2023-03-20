@@ -37,4 +37,50 @@ Después...manage access...add people.
 
 Ahora, ambas personas deberán clonar el repositorio en sus computadoras siguiendo los siguientes pasos:
 
-1. Clonar el enlace del repositorio
+1. Clonar el enlace del repositorio. Para ello deberán copiar el enlace que aparece al presionar "<> Code", en la pestaña "HTTP" como indica la imágen.
+
+![]()
+
+2. Clonar el repositorio en sus computadoras utilizando la consola de Git: `git clone https://github...`
+
+### Parte 3: Editar el proyecto
+
+En este paso, cada integrante de la pareja hará un cambio en el proyecto, que no afectará el trabajo del otro y luego ambas personas descargarán los cambios.
+
+**Pasos para Persona 🅰️**
+
+Editar archivo `clases/usuario.py`, y agregar los siguientes métodos de clase:
+
+```python
+def agregarTarea(self, tarea):
+        self.tareas.append(tarea)
+```
+
+Y en el archivo `clases/tarea.py` agregar los siguientes métodos de clase:
+```python
+def terminar(self):
+        self.listo = True
+```
+
+**Pasos para Persona 🅱️**
+
+Editar archivo `clases/usuario.py`, y agregar los siguientes métodos de clase:
+
+```python
+    def listarTareas(self):
+        for tarea in self.tareas:
+            if tarea.estaLista():
+                print(f"[X] {tarea.obtenerNombre()}" )
+            else:
+                print(f"[ ] {tarea.obtenerNombre()}" )
+```
+
+Y en el archivo `clases/tarea.py` agregar los siguientes métodos de clase:
+```python
+def terminar(self):
+        self.listo = True
+```
+
+
+
+
