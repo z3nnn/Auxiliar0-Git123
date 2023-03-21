@@ -31,7 +31,7 @@ Ahora, la persona A (quien realizó el fork) deberá darle acceso a su pareja (P
 
 Después...manage access...add people.
 
-| Todos los miembros deben ser colaboradores del repositorio. Esto les dará acceso a hacer modificaciones al proyecto.
+> Todos los miembros deben ser colaboradores del repositorio. Esto les dará acceso a hacer modificaciones al proyecto.
 
 ### Parte 2: Clonar el proyecto
 
@@ -129,26 +129,33 @@ def listarTareas(self):
 
 Esto pasa cuando dos personas editan en mismo archivo del proyecto. Muchas veces Git puede solucionar estos conflictos automáticamente, pero otras veces la persona que realiza el push deberá decidir cuál será el código definitivo (luego de conversar con todo el equipo de desarrollo).
 
-5. Persona A verá que su archivo `clase
+5. Persona A verá que su archivo `clases/usuario.py está modificado y le agregaron algunas líneas. Lo primero que se ve es:
 
-
-
-
-
-
-
-
-
----
-
-Y en el archivo `clases/tarea.py` agregar los siguientes métodos de clase:
 ```python
-def terminar(self):
-        self.listo = True
+   <<<<<<< HEAD 
+        <codigo local>
+    >>>>>>>> 
 ```
 
-Ahora ambas personas deben 
+Donde HEAD representa la punta de la rama en la que se está trabajando. En este caso, como ya se creó el commit, HEAD será la versión del código que Persona A editó recién. El código que aparecerá en esta parté será la versión del código en conflicto de la rama local. Luego veremos lo  siguiente:
 
+```python
+     <codigo remoto>
+>>>>>>> 17ed5a8a2f2b44e4daf2302d63f6a6b8163xxxxx
+```
 
+Por lo tanto, el código que aparecerá ahí será la versión del código de la rama remota. En este caso sería el código que subió Persona B. El número largo que aparecerá es el identificador del último commit remoto.
 
+> Con esto, Git nos muestra dos versiones del código, y la persona que está desarrollando deberá decidir cuál será la versión definitiva. Cuidado con este tipo de procedimientos, ya que podrían eliminar trabajo de otras personas.
 
+6. Persona A decidirá dejar su versión y no la de su pareja, por lo que eliminará todo el código que Git agregó incluyendo los síumbolos <, HEAD e identificadores de commit. Viendo los códigos del punto 5 debería quedar solo <codigo local>.
+
+7. Finalmente, Persona A deberá subir el resultado del merge. Para ello debe:
+
+* Volver a agregar los archivos modificados durante el merge haciendo `git add clases/usuario.py`
+`git commit` para hacer commit del merge. Aquí no es necesario poner -m y el mensaje porque se está haciendo merge.
+`git push` para terminar de subir los cambios locales y el arreglo de los conflictos.
+
+Si revisan los commits en github verán que se crearon dos commits. Un commit por hacer merge de la rama remota y la local, y otro commit que representa los cambios que hizo Persona A.
+
+## Más información sobre Git
