@@ -11,7 +11,7 @@ Los objetivos de esta actividad son los siguientes:
 * Pasarlo bien.
 
 Para esta actividad necesitarán:
-1. Tener instalado un cliente de git, el cual pueden descargar y configurar siguiendo este [tutorial](Por cambiar).
+1. Tener instalado un cliente de git, el cual pueden descargar y configurar siguiendo este [tutorial|(https://docs.github.com/en/get-started/quickstart/set-up-git).
 2. Contar con una segunda persona.
 3. Su editor de texto favorito. Entre ellos están: [Sublime Text](https://www.sublimetext.com/blog/articles/sublime-text-4), [VS Code](https://code.visualstudio.com/).
 
