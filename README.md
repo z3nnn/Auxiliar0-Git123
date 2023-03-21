@@ -27,9 +27,7 @@ Luego de hacer el Fork, deberían tener un repositorio con la misma imagen con e
 
 Ahora, la persona A (quien realizó el fork) deberá darle acceso a su pareja (Persona B). Para ello deberán ir a "settings" en la barra superior del repositorio (como indica la imágen).
 
-![]()
-
-Después...manage access...add people.
+![]() Después...manage access...add people.
 
 > Todos los miembros deben ser colaboradores del repositorio. Esto les dará acceso a hacer modificaciones al proyecto.
 
@@ -152,10 +150,8 @@ Por lo tanto, el código que aparecerá ahí será la versión del código de la
 
 7. Finalmente, Persona A deberá subir el resultado del merge. Para ello debe:
 
-* Volver a agregar los archivos modificados durante el merge haciendo `git add clases/usuario.py`
-`git commit` para hacer commit del merge. Aquí no es necesario poner -m y el mensaje porque se está haciendo merge.
-`git push` para terminar de subir los cambios locales y el arreglo de los conflictos.
+     1. Volver a agregar los archivos modificados durante el merge haciendo `git add clases/usuario.py`.
+     2. `git commit` para hacer commit del merge. Aquí no es necesario poner -m y el mensaje porque se está haciendo merge.
+     3. `git push` para terminar de subir los cambios locales y el arreglo de los conflictos.
 
 Si revisan los commits en github verán que se crearon dos commits. Un commit por hacer merge de la rama remota y la local, y otro commit que representa los cambios que hizo Persona A.
-
-## Más información sobre Git
