@@ -73,7 +73,73 @@ def listarTareas(self):
 
 4. **Persona 🅱️** actualizará el repositorio remoto con sus cambios según el paso 2. Al hacer `git push` aparecerá un mensaje de error.
 
-Esto pasará porque **Persona 🅰️** hizo cambios a un archivos, cambios que **Persona 🅱️** no ha descargado. Para arreglar esto, **Persona 🅱️** deberá hacer `git pull`. Al hacer esto, juntará (merge) la versión del repostorio remoto con la versión local. Por esta razón aparecerá un editor con un mensaje parecido a este
+Esto pasará porque **Persona 🅰️** hizo cambios a un archivos, cambios que **Persona 🅱️** no ha descargado. Para arreglar esto, **Persona 🅱️** deberá hacer `git pull`. Al hacer esto, juntará (merge) la versión del repostorio remoto con la versión local. Por esta razón aparecerá un editor con un mensaje parecido a este:
+
+![]()
+
+> Si no hay instrucciones para salir de ahí, prueba escribiendo ":wq" y luego presiona enter. Si no funciona, pide ayuda.
+
+Persona B deberá hacer `git push` de nuevo para que sus cambios se suban al repositorio remoto.
+
+5. **Persona A** hará `git pull` en la consola de Git y podrá ver los cambios realizados por Persona B sin problemas.
+
+> Para no tener este problema, se recomienda realizar `git pull` antes de las instrucciones del paso 2, pero después de modificar el código, así te aseguras de arreglar cualquier error que pueda producirse entre el código remoto y tus cambios locales antes de crear el commit.
+
+### Parte 4: Editar mismo archivo
+
+¿Qué pasaría si persona B quiere quitarle el método listarTareas a la clase Usuario en `usuario.py` sin avisar y **Persona A decide moidificar la forma en que se muestran la lista de tareas?
+
+1. Persona B quitará la línea de código en `clases/usuario.py`
+
+```python
+def listarTareas(self):
+    for tarea in self.tareas:
+        if tarea.estaLista():
+            print(f"[X] {tarea.obtenerNombre()}" )
+        else: <<<<<<< Elimina esta
+            print(f"[ ] {tarea.obtenerNombre()}" ) <<<<< y esta
+```
+
+2. Persona B actualizará el repositorio remoto segúin las instrucciones de la parte 3, páso 2.
+
+3. Persona A (SIN DESCARGAR LOS CAMBIOS DE LA OTRA PERSONA) editará la siguiente línea del mismo archivo:
+
+```python
+def listarTareas(self):
+    for tarea in self.tareas:
+        if tarea.estaLista():
+            print(f"[X] {tarea.obtenerNombre()}" )
+        else:
+            print(f"[ ] {tarea.obtenerNombre()}" )
+```
+ Lo reemplazará por:
+ 
+ ```python
+def listarTareas(self):
+    for tarea in self.tareas:
+        if tarea.estaLista():
+            print(f"La tarea {tarea.obtenerNombre()} está lista")
+        else: <<<<<<< Elimina esta
+            print(f"La tarea {tarea.obtenerNombre()} no está lista")
+```
+
+4. Persona A actualizará el repositorio remoto según las instrucciones de la parte 3, paso 2. Al hacer `git push`, Persona A verá que hay un conflicto como pasó en la parte anterior. Para resolver esto se debe hacer git pull y aparecerá este mensaje:
+
+![]()
+
+Esto pasa cuando dos personas editan en mismo archivo del proyecto. Muchas veces Git puede solucionar estos conflictos automáticamente, pero otras veces la persona que realiza el push deberá decidir cuál será el código definitivo (luego de conversar con todo el equipo de desarrollo).
+
+5. Persona A verá que su archivo `clase
+
+
+
+
+
+
+
+
+
+---
 
 Y en el archivo `clases/tarea.py` agregar los siguientes métodos de clase:
 ```python
