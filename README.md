@@ -27,7 +27,11 @@ Luego de hacer el Fork, deberían tener un repositorio con la misma imagen con e
 
 Ahora, la persona A (quien realizó el fork) deberá darle acceso a su pareja (Persona B). Para ello deberán ir a "settings" en la barra superior del repositorio (como indica la imágen).
 
-![]() Después...manage access...add people.
+![settings](https://i.imgur.com/fe4pMvn.png)
+
+Luego, Collaborators -> Manage access -> Add people.
+
+![add_people](https://i.imgur.com/TN1XT6I.png)
 
 > Todos los miembros deben ser colaboradores del repositorio. Esto les dará acceso a hacer modificaciones al proyecto.
 
@@ -37,7 +41,7 @@ Ahora, ambas personas deberán clonar el repositorio en sus computadoras siguien
 
 1. Clonar el enlace del repositorio. Para ello deberán copiar el enlace que aparece al presionar "<> Code", en la pestaña "HTTP" como indica la imágen.
 
-![]()
+![code](https://i.imgur.com/PXuKFxk.png)
 
 2. Clonar el repositorio en sus computadoras utilizando la consola de Git: `git clone https://github...`
 
