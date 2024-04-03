@@ -1,4 +1,4 @@
-# Auxiliar 1: Git
+# Auxiliar 0: Git
 
 Git es un software que permite hacer control de versiones de nuestros proyectos. Durante esta actividad vamos a simular un flujo de trabajo de desarrollo de software.
 
